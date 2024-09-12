@@ -36,7 +36,7 @@ namespace EmployeMVC.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Department");
+                    b.ToTable("Departments");
 
                     b.HasData(
                         new
@@ -61,7 +61,7 @@ namespace EmployeMVC.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Designation");
+                    b.ToTable("Designations");
 
                     b.HasData(
                         new

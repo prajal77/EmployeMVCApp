@@ -1,5 +1,7 @@
 ﻿using EmployeMVC.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using System.Collections;
 
 namespace EmployeMVC.Data
 {
@@ -11,6 +13,9 @@ namespace EmployeMVC.Data
             
         }
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<Designation> Designations { get; set; }
+        public DbSet<Department> Departments { get;  set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -40,5 +45,6 @@ namespace EmployeMVC.Data
                
               );
         }
+        
     }
 }

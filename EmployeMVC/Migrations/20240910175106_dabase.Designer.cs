@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EmployeMVC.Migrations
 {
     [DbContext(typeof(DatabaseDbContext))]
-    [Migration("20240910090554_dabaseNameChange")]
-    partial class dabaseNameChange
+    [Migration("20240910175106_dabase")]
+    partial class dabase
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -40,6 +40,13 @@ namespace EmployeMVC.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Department");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "IT Department"
+                        });
                 });
 
             modelBuilder.Entity("EmployeMVC.Models.Designation", b =>
@@ -58,6 +65,13 @@ namespace EmployeMVC.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Designation");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Intern"
+                        });
                 });
 
             modelBuilder.Entity("EmployeMVC.Models.Employee", b =>
@@ -101,6 +115,18 @@ namespace EmployeMVC.Migrations
                     b.HasIndex("DesignationId");
 
                     b.ToTable("Employees");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Address = "Bhaktapur",
+                            DepartmentId = 1,
+                            DesignationId = 1,
+                            Email = "prajal.basnet0@gmail.com",
+                            Name = "Prajwol Basnet",
+                            PhoneNo = "9861329908"
+                        });
                 });
 
             modelBuilder.Entity("EmployeMVC.Models.Employee", b =>

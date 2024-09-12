@@ -8,7 +8,7 @@ namespace EmployeMVC.Models
         [Key]
         public int Id { get; set; }
 
-        [Column("Department Name:", TypeName = "varchar(50)")]
+        [Column("Designation Name:", TypeName = "varchar(50)")]
         public string Name { get; set; }
     }
 }

@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EmployeMVC.Migrations
 {
     [DbContext(typeof(DatabaseDbContext))]
-    [Migration("20240910101511_dabaseChangesAgain")]
-    partial class dabaseChangesAgain
+    [Migration("20240911042114_dabaseadd")]
+    partial class dabaseadd
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -39,7 +39,7 @@ namespace EmployeMVC.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Department");
+                    b.ToTable("Departments");
 
                     b.HasData(
                         new
@@ -64,7 +64,7 @@ namespace EmployeMVC.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Designation");
+                    b.ToTable("Designations");
 
                     b.HasData(
                         new
